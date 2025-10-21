@@ -1,0 +1,102 @@
+.models-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.models-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.model-card {
+    position: relative;
+    height: 250px;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.model-card:hover {
+    transform: scale(1.05);
+}
+
+.model-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: #fff;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    padding: 20px;
+    text-align: left;
+}
+
+.model-card:hover .overlay {
+    transform: translateY(0);
+}
+
+.overlay h3 {
+    margin: 0 0 10px;
+    font-size: 1.2em;
+}
+
+.overlay p {
+    font-size: 0.95em;
+    line-height: 1.4;
+}
+
+.model-card {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    aspect-ratio: 16 / 9; /* keeps consistent proportions */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.model-card:hover {
+    transform: scale(1.05);
+}
+
+.model-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* ensures image fills container nicely */
+    object-position: center; /* centers image focus */
+    display: block;
+    border-radius: 12px;
+}
+
+/* Optional: if you want smaller images to never stretch */
+@media (max-width: 600px) {
+    .model-card {
+        aspect-ratio: 4 / 3;
+        max-width: 100%;
+    }
+}
